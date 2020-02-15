@@ -1,35 +1,37 @@
+# 指定构建环境是Node.js，当前版本是稳定版
 language: node_js
 node_js: stable
 
+# 设置钩子只检测blog-source分支的push变动
+branches:
+  only:
+    - blog-source
+
+# 设置缓存文件
 cache:
-    apt: true
-    directories:
-        - node_modules
+  directories:
+    - node_modules
 
+#在构建之前安装hexo环境和主题，这里的主题就是原来修改过的主题，我将其托管到另一个github仓库，直接clone就行，否则每次都是新的主题，要重新设置。
 before_install:
-    - npm install hexo-cli -g
+  - npm install hexo-cli --save
+#  - git clone https://github.com/TriDiamond/hexo-theme-obsidian.git themes/obsidian
 
+#安装git插件和搜索功能插件
 install:
   - npm install
   - npm install hexo-deployer-git --save
+  - npm install hexo-generator-searchdb --save
 
+# 执行清缓存，生成网页操作
 script:
   - hexo clean
-  - hexo g
+  - hexo generate
 
+# 设置git提交名，邮箱；替换真实token到_config.yml文件，最后depoy部署
 after_script:
-  - git clone ${GH_REF} hexo-public
-  - cp -rf public/* hexo-public/
-  - cd hexo-public
   - git config user.name "GaoRuiLian"
   - git config user.email "gaorl0129@qq.com"
-  - git add .
-  - git commit -am "Travis CI Auto Builder..."
-  - git push origin master 
-
-branches:
-  only:
-    - master
-env:
- global:
-   - GH_REF: https://771007147:${github_token}@github.com/771007147/771007147.github.io.git 
+  # 替换同目录下的_config.yml文件中github_token字符串为travis后台刚才配置的变量，注>意此处sed命令用了双引号。单引号无效！
+  - sed -i "s/github_token/${github_token}/g" ./_config.yml
+  - hexo deploy
