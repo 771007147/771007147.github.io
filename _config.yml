@@ -108,3 +108,5 @@ search:
   path: search.xml
   field: post
   content: true
+
+github_token: a5e56f2de6177d02a3e6e9afa0aeea8579d04fc7
