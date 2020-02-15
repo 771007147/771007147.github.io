@@ -15,7 +15,7 @@ tags:
 
 `官网`：https://brew.sh/
 
-`Install`：
+`Install`
 
 ```shell
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
