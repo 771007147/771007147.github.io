@@ -100,7 +100,8 @@ theme: obsidian
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/771007147/771007147.github.io.git
+  #repo: https://github.com/771007147/771007147.github.io.git
+  repo: https://github_token@github.com/771007147/771007147.github.io.git
   branch: master
   message:
 
@@ -108,5 +109,3 @@ search:
   path: search.xml
   field: post
   content: true
-
-github_token: a5e56f2de6177d02a3e6e9afa0aeea8579d04fc7
