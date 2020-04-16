@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>macOS Developer Tools Install And Configure</title>
+    <url>/2020/02/15/200215-macOS-Developer-Configure/</url>
+    <content><![CDATA[<h1 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h1><h2 id="iTem2"><a href="#iTem2" class="headerlink" title="iTem2"></a>iTem2</h2><p><code>Github</code>：<a href="https://github.com/gnachman/iTerm2" target="_blank" rel="noopener">https://github.com/gnachman/iTerm2</a></p>
+<h2 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h2><p><code>官网</code>：<a href="https://brew.sh/" target="_blank" rel="noopener">https://brew.sh/</a></p>
+<p><code>Install</code></p>
+<pre><code class="shell">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></pre>
+<h2 id="Zsh"><a href="#Zsh" class="headerlink" title="Zsh"></a>Zsh</h2><p><code>Github</code>：<a href="https://github.com/zsh-users/zsh" target="_blank" rel="noopener">https://github.com/zsh-users/zsh</a></p>
+<p><code>Change Shell</code>：</p>
+<pre><code class="shell">chsh -s /bin/zsh</code></pre>
+<h2 id="Oh-My-Zsh"><a href="#Oh-My-Zsh" class="headerlink" title="Oh My Zsh"></a>Oh My Zsh</h2><p><code>Github</code>：<a href="https://github.com/ohmyzsh/ohmyzsh" target="_blank" rel="noopener">https://github.com/ohmyzsh/ohmyzsh</a></p>
+<p><code>Install</code>：</p>
+<pre><code class="shell">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</code></pre>
+<p><code>Add Plugin</code>：</p>
+<pre><code class="shell">vim ~/.zshrc
+
+ZSH_THEME=&quot;ys&quot;
+
+plugins=(
+        git
+        zsh-syntax-highlighting
+        zsh-autosuggestions
+)</code></pre>
+<p><code>zsh-syntax-highlighting</code>：</p>
+<pre><code class="shell">git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting</code></pre>
+<p><code>zsh-autosuggestions</code>：</p>
+<pre><code class="shell">git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions</code></pre>
+<h2 id="nvm"><a href="#nvm" class="headerlink" title="nvm"></a>nvm</h2><p><code>Github</code>：<a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener">https://github.com/nvm-sh/nvm</a></p>
+<pre><code class="shell">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash</code></pre>
+<h1 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h1><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Link</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Typora</td>
+<td><a href="https://www.typora.io/" target="_blank" rel="noopener">https://www.typora.io/</a></td>
+<td>Markdown</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>macOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/02/15/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+</search>
